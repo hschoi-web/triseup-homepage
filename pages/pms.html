@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-RiseUp PMS | 의전·수송 통합 관리 시스템</title>
+<meta name="description" content="예약부터 정산까지 수송 운영의 모든 것을 하나로. AI견적 95%+, 5초 GPS, 4채널 통합 아키텍처.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- GNB -->
+<header class="gnb" id="gnb">
+  <div class="gnb-inner">
+    <a href="../index.html" class="gnb-logo"><img src="../images/TRISEUP.png" alt="T-RiseUp" height="36"></a>
+    <nav class="gnb-nav">
+      <div class="nav-item has-dropdown">
+        <button class="nav-link dropdown-trigger">제품 <svg class="chevron" width="12" height="12" viewBox="0 0 12 12"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+        <div class="dropdown-menu">
+          <a href="pms.html" class="dropdown-item"><strong>PMS</strong><span>의전·수송 통합 관리</span></a>
+          <a href="tms.html" class="dropdown-item"><strong>TMS</strong><span>셔틀·관광 티켓 관리</span></a>
+          <a href="license.html" class="dropdown-item"><strong>면허 솔루션</strong><span>플랫폼운송사업 면허</span></a>
+          <a href="marketplace.html" class="dropdown-item"><strong>Marketplace</strong><span>RIDEUS 통합 판매채널</span></a>
+        </div>
+      </div>
+      <a href="cases.html" class="nav-link">도입사례</a>
+      <a href="#" class="nav-link">리소스</a>
+    </nav>
+    <a href="demo.html?product=pms" class="btn btn-primary gnb-cta">무료 데모 신청</a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="../index.html" class="gnb-logo"><img src="../images/TRISEUP.png" alt="T-RiseUp" height="36"></a>
+    <button class="mobile-close" id="mobileClose" aria-label="메뉴 닫기">&times;</button>
+  </div>
+  <nav class="mobile-nav">
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-title">제품</button>
+      <div class="mobile-subnav"><a href="pms.html">PMS</a><a href="tms.html">TMS</a><a href="license.html">면허 솔루션</a><a href="marketplace.html">Marketplace</a></div>
+    </div>
+    <a href="cases.html" class="mobile-nav-link">도입사례</a>
+  </nav>
+  <a href="demo.html?product=pms" class="btn btn-primary mobile-cta">PMS 데모 신청</a>
+</div>
+
+<!-- Hero -->
+<section class="product-hero">
+  <div class="container">
+    <div class="product-hero-content">
+      <span class="product-hero-tag">PMS</span>
+      <h1>예약부터 정산까지,<br>수송 운영의 모든 것을 하나로</h1>
+      <p>의전·수송 사업자를 위한 통합 관리 플랫폼</p>
+      <div class="product-hero-features">
+        <span class="feature-pill">AI 견적 95%+</span>
+        <span class="feature-pill">GPS 5초</span>
+        <span class="feature-pill">D2C 예약</span>
+        <span class="feature-pill">자동 정산</span>
+      </div>
+      <a href="demo.html?product=pms" class="btn btn-primary btn-lg">PMS 데모 신청</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4채널 아키텍처 -->
+<section class="section section-white">
+  <div class="container">
+    <h2 class="section-title">4채널 통합 아키텍처</h2>
+    <p class="section-subtitle">하나의 플랫폼에서 모든 채널을 운영하세요</p>
+    <div class="channel-tabs">
+      <button class="channel-tab active" data-channel="ch-dispatch">DISPATCH</button>
+      <button class="channel-tab" data-channel="ch-concierge">CONCIERGE</button>
+      <button class="channel-tab" data-channel="ch-partners">PARTNERS</button>
+      <button class="channel-tab" data-channel="ch-booking">BOOKING</button>
+    </div>
+    <div id="ch-dispatch" class="channel-content active">
+      <h4>DISPATCH — 예약·배차·관제·정산 통합 웹</h4>
+      <p>관리자가 모든 예약과 배차를 한 화면에서 처리합니다. 실시간 GPS 관제, 자동 정산, AI 돌발 감지까지 하나의 대시보드로 운영 효율을 극대화하세요.</p>
+      <div class="mockup-placeholder" style="margin-top:20px">DISPATCH 대시보드 스크린샷</div>
+    </div>
+    <div id="ch-concierge" class="channel-content">
+      <h4>CONCIERGE — 거래처 B2B 전용 예약</h4>
+      <p>호텔·여행사 등 거래처가 직접 예약을 생성할 수 있는 B2B 전용 채널입니다. 거래처별 맞춤 요금, 정산 내역 실시간 확인이 가능합니다.</p>
+      <div class="mockup-placeholder" style="margin-top:20px">CONCIERGE 예약 화면</div>
+    </div>
+    <div id="ch-partners" class="channel-content">
+      <h4>PARTNERS — 운전기사 모바일 앱</h4>
+      <p>기사가 스마트폰에서 배차 확인, 운행 시작/완료, QR 검표까지 처리합니다. 실시간 위치 공유로 관제실과 즉시 연동됩니다.</p>
+      <div class="mockup-placeholder" style="margin-top:20px">PARTNERS 모바일 앱</div>
+    </div>
+    <div id="ch-booking" class="channel-content">
+      <h4>BOOKING — 해외고객 직접 예약 (D2C)</h4>
+      <p>해외 고객이 다국어 페이지에서 직접 예약하고 결제합니다. PayPal·VISA·MC·JCB·AMEX 등 글로벌 결제 8종을 지원합니다.</p>
+      <div class="mockup-placeholder" style="margin-top:20px">BOOKING 예약 페이지</div>
+    </div>
+  </div>
+</section>
+
+<!-- 배차 2모드 -->
+<section class="section section-gray">
+  <div class="container">
+    <h2 class="section-title">배차 운영 2모드</h2>
+    <p class="section-subtitle">운영 규모와 방식에 맞게 선택하세요</p>
+    <div class="product-split">
+      <div class="product-card scroll-reveal">
+        <div class="product-tag">요청형</div>
+        <h3 class="product-title">배차 요청형</h3>
+        <p class="product-desc">가용 기사가 수락하는 방식. 소규모 운영에 최적.</p>
+        <ul class="product-features">
+          <li>배차 요청 자동 발송</li>
+          <li>기사 수락/거절 관리</li>
+          <li>소규모 팀에 최적화</li>
+        </ul>
+      </div>
+      <div class="product-card scroll-reveal">
+        <div class="product-tag">확정형</div>
+        <h3 class="product-title">배차 확정형</h3>
+        <p class="product-desc">관리자가 직접 지정하는 방식. VIP 의전에 최적.</p>
+        <ul class="product-features">
+          <li>관리자 직접 배차 지정</li>
+          <li>VIP 의전 전용 워크플로우</li>
+          <li>100대+ 대규모 운영</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 핵심 기능 상세 -->
+<section class="section section-white">
+  <div class="container">
+    <h2 class="section-title">핵심 기능</h2>
+    <div class="feature-grid">
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon">AI</div>
+        <h4>AI 자동 견적</h4>
+        <p>20개+ 변수를 분석하여 95%+ 정확도의 자동 견적을 생성합니다.</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="9" width="20" height="9" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M5 9l2-4h10l2 4"/></svg></div>
+        <h4>AI 최적 배차</h4>
+        <p>차량 위치·기사 스케줄·고객 요구를 종합 분석하여 최적 배차를 추천합니다.</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h4>실시간 GPS 관제</h4>
+        <p>5초 주기로 모든 차량 위치를 실시간 추적합니다. 100대 이상 동시 관제 가능.</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h4>AI 돌발 감지</h4>
+        <p>교통 이상, 경로 이탈, 지연 등 돌발 상황을 자동 감지하고 알림합니다.</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+        <h4>항공편 실시간 연동</h4>
+        <p>항공편 도착 시간에 맞춰 픽업 시간을 자동 조정합니다.</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 1v22m5-18H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H7"/></svg></div>
+        <h4>자동 정산</h4>
+        <p>운행 완료 후 자동으로 정산 내역을 생성합니다. 수기 작업 제로.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 차별화 -->
+<section class="section section-gray">
+  <div class="container">
+    <h2 class="section-title">경쟁사가 제공하지 못하는 것</h2>
+    <div class="feature-grid" style="max-width:800px;margin:32px auto 0;">
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+        <h4>항공편 실시간 연동</h4>
+        <p>도착 지연 시 픽업 시간 자동 조정</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 7a4 4 0 110 8 4 4 0 010-8z"/></svg></div>
+        <h4>협력사 배차 관리</h4>
+        <p>파트너 운수사에 배차를 위임하고 통합 관제</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h4>마켓 (기업간 공유)</h4>
+        <p>유휴 차량을 다른 사업자와 공유하여 수익화</p>
+      </div>
+      <div class="feature-item scroll-reveal">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+        <h4>100대+ 관제 확장성</h4>
+        <p>대규모 행사에서도 끊김 없는 실시간 관제</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 레퍼런스 -->
+<section class="section section-white">
+  <div class="container">
+    <h2 class="section-title">PMS 도입 사례</h2>
+    <div class="stories-grid">
+      <div class="story-card scroll-reveal">
+        <div class="story-badges"><span class="badge badge-official">공식</span></div>
+        <h4 class="story-company">APEC 2025 수송포탈</h4>
+        <p class="story-impact"><strong>21개국</strong> 정상 · <strong>7개</strong> 교통수단</p>
+      </div>
+      <div class="story-card scroll-reveal">
+        <div class="story-badges"><span class="badge badge-whitepaper">백서</span></div>
+        <h4 class="story-company">부산세계탁구선수권대회</h4>
+        <p class="story-impact"><strong>990회</strong> 운행 · <strong>7톤</strong> CO₂ 감축</p>
+      </div>
+      <div class="story-card scroll-reveal">
+        <h4 class="story-company">제주드림타워</h4>
+        <p class="story-impact">VIP 리무진 <strong>통합 운영</strong></p>
+      </div>
+      <div class="story-card scroll-reveal">
+        <div class="story-badges"><span class="badge badge-global">글로벌</span></div>
+        <h4 class="story-company">GB Limousine Thailand</h4>
+        <p class="story-impact"><strong>96%</strong> 시간 단축 · <strong>30%</strong> 공차 감소</p>
+      </div>
+      <div class="story-card scroll-reveal">
+        <div class="story-badges"><span class="badge badge-new">NEW</span></div>
+        <h4 class="story-company">ADB 연차총회</h4>
+        <p class="story-impact"><strong>70대</strong> 차량 · 국제기구 공식</p>
+      </div>
+      <div class="story-card scroll-reveal">
+        <h4 class="story-company">AFC Awards 2023</h4>
+        <p class="story-impact">VIP 의전 <strong>무사고</strong> 운영</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="bottom-cta">
+  <div class="container">
+    <h2>PMS로 수송 운영을 혁신하세요</h2>
+    <p>맞춤 데모를 통해 귀사에 최적화된 솔루션을 확인하세요.</p>
+    <div class="bottom-cta-buttons">
+      <a href="demo.html?product=pms" class="btn btn-white btn-lg">PMS 데모 신청</a>
+      <a href="cases.html" class="btn btn-outline-white btn-lg">도입사례 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col"><div class="footer-logo"><img src="../images/TRISEUP.png" alt="T-RiseUp" height="36"></div><p class="footer-company">(주)그라운드케이</p></div>
+      <div class="footer-col"><h4>제품</h4><ul><li><a href="pms.html">PMS</a></li><li><a href="tms.html">TMS</a></li><li><a href="license.html">면허 솔루션</a></li></ul></div>
+      <div class="footer-col"><h4>회사</h4><ul><li><a href="cases.html">도입사례</a></li><li><a href="demo.html">데모 신청</a></li></ul></div>
+      <div class="footer-col"><h4>고객지원</h4><ul><li><a href="#">개인정보처리방침</a></li><li><a href="#">이용약관</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 GroundK. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

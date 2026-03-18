@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.bak
+index_backup.html
+js/main_check.txt
