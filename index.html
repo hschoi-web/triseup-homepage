@@ -150,74 +150,94 @@
     <h2 class="section-title">수송 운영, 어제와 오늘</h2>
     <p class="section-subtitle">같은 하루, 완전히 다른 운영 현실</p>
 
-    <!-- Before -->
-    <div class="ba-label scroll-reveal">
-      <span class="ba-label-tag ba-label-before">BEFORE</span>
-      <span class="ba-label-desc">T-RiseUp 도입 전</span>
+    <!-- 2단 헤더 -->
+    <div class="ba-columns">
+      <div class="ba-col-header ba-col-header-before">
+        <span class="ba-col-tag ba-tag-before">BEFORE</span>
+        <span class="ba-col-desc">T-RiseUp 도입 전</span>
+      </div>
+      <div class="ba-col-center-header"></div>
+      <div class="ba-col-header ba-col-header-after">
+        <span class="ba-col-tag ba-tag-after">AFTER</span>
+        <span class="ba-col-desc">T-RiseUp 도입 후</span>
+      </div>
     </div>
-    <div class="ba-grid">
-      <div class="ba-card ba-card-before scroll-reveal">
-        <span class="ba-time">09:00</span>
+
+    <!-- 타임라인 Row 1: 09:00 -->
+    <div class="ba-row scroll-reveal">
+      <div class="ba-cell ba-cell-before">
         <h4>중복 배차</h4>
-        <p>같은 차량에 두 건이 겹쳤다. 기사에게 전화해서 수동으로 재배치.</p>
+        <p>같은 차량에 두 건이 겹쳤다. 고객에게 전화하며 식은땀이 난다.</p>
       </div>
-      <div class="ba-card ba-card-before scroll-reveal">
-        <span class="ba-time">11:00</span>
-        <h4>엑셀 배차표</h4>
-        <p>100칸짜리 스프레드시트를 열고 수작업으로 차량·기사를 배정한다.</p>
+      <div class="ba-cell-center">
+        <span class="ba-dot"></span>
+        <span class="ba-time-label">09:00</span>
       </div>
-      <div class="ba-card ba-card-before scroll-reveal">
-        <span class="ba-time">13:00</span>
-        <h4>차량 위치 확인 전화</h4>
-        <p>"기사님 지금 어디세요?" 하루 수십 통의 전화가 반복된다.</p>
-      </div>
-      <div class="ba-card ba-card-before scroll-reveal">
-        <span class="ba-time">16:00</span>
-        <h4>해외 결제 불가</h4>
-        <p>외국인 고객이 결제를 못 해 현장에서 현금을 요구한다.</p>
-      </div>
-      <div class="ba-card ba-card-before scroll-reveal">
-        <span class="ba-time">19:00</span>
-        <h4>수기 정산 야근</h4>
-        <p>영수증 더미를 대조하며 정산. 퇴근은 늘 마지막이다.</p>
-      </div>
-    </div>
-
-    <!-- Divider -->
-    <div class="ba-divider scroll-reveal">
-      <span class="ba-divider-line"></span>
-      <span class="ba-divider-arrow">↓</span>
-      <span class="ba-divider-line"></span>
-    </div>
-
-    <!-- After -->
-    <div class="ba-label scroll-reveal">
-      <span class="ba-label-tag ba-label-after">AFTER</span>
-      <span class="ba-label-desc">T-RiseUp 도입 후</span>
-    </div>
-    <div class="ba-grid">
-      <div class="ba-card ba-card-after scroll-reveal">
-        <span class="ba-time">09:00</span>
+      <div class="ba-cell ba-cell-after">
         <h4>AI 자동 배차</h4>
         <p>차량·기사 충돌을 사전 차단. 실시간 가용 현황 기반 최적 배차.</p>
       </div>
-      <div class="ba-card ba-card-after scroll-reveal">
-        <span class="ba-time">11:00</span>
+    </div>
+
+    <!-- 타임라인 Row 2: 11:00 -->
+    <div class="ba-row scroll-reveal">
+      <div class="ba-cell ba-cell-before">
+        <h4>엑셀 배차</h4>
+        <p>100칸짜리 스프레드시트를 또 열었다. 수식 하나 잘못 건드리면 대참사.</p>
+      </div>
+      <div class="ba-cell-center">
+        <span class="ba-dot"></span>
+        <span class="ba-time-label">11:00</span>
+      </div>
+      <div class="ba-cell ba-cell-after">
         <h4>원클릭 배차 대시보드</h4>
         <p>간트차트 뷰에서 드래그 앤 드롭. 100건 배차를 1분 안에 완료.</p>
       </div>
-      <div class="ba-card ba-card-after scroll-reveal">
-        <span class="ba-time">13:00</span>
+    </div>
+
+    <!-- 타임라인 Row 3: 13:00 -->
+    <div class="ba-row scroll-reveal">
+      <div class="ba-cell ba-cell-before">
+        <h4>차량 위치 전화</h4>
+        <p>"기사님 지금 어디세요?" — 하루에 수십 번 반복되는 전화.</p>
+      </div>
+      <div class="ba-cell-center">
+        <span class="ba-dot"></span>
+        <span class="ba-time-label">13:00</span>
+      </div>
+      <div class="ba-cell ba-cell-after">
         <h4>GPS 실시간 관제</h4>
         <p>5초 간격 GPS 추적. 지도에서 전체 차량 위치를 즉시 확인.</p>
       </div>
-      <div class="ba-card ba-card-after scroll-reveal">
-        <span class="ba-time">16:00</span>
+    </div>
+
+    <!-- 타임라인 Row 4: 16:00 -->
+    <div class="ba-row scroll-reveal">
+      <div class="ba-cell ba-cell-before">
+        <h4>해외 결제 불가</h4>
+        <p>외국인 고객이 결제를 못 한다. PayPal? VISA? 지원이 안 된다.</p>
+      </div>
+      <div class="ba-cell-center">
+        <span class="ba-dot"></span>
+        <span class="ba-time-label">16:00</span>
+      </div>
+      <div class="ba-cell ba-cell-after">
         <h4>8종 글로벌 결제</h4>
         <p>Visa·Mastercard·PayPal·Alipay 등 즉시 결제. 현금 없이 완결.</p>
       </div>
-      <div class="ba-card ba-card-after scroll-reveal">
-        <span class="ba-time">19:00</span>
+    </div>
+
+    <!-- 타임라인 Row 5: 19:00 -->
+    <div class="ba-row scroll-reveal">
+      <div class="ba-cell ba-cell-before">
+        <h4>수기 정산 야근</h4>
+        <p>영수증 더미와 씨름 중. 오늘도 야근이다.</p>
+      </div>
+      <div class="ba-cell-center">
+        <span class="ba-dot"></span>
+        <span class="ba-time-label">19:00</span>
+      </div>
+      <div class="ba-cell ba-cell-after">
         <h4>실시간 자동 정산</h4>
         <p>운행 종료 즉시 자동 정산. 세금계산서까지 원클릭 처리.</p>
       </div>

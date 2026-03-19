@@ -599,141 +599,104 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================================
-   S3. BEFORE / AFTER (통합 디자인)
+   S3. BEFORE / AFTER (좌우 2단 타임라인)
    ======================================== */
 
-/* Label: BEFORE / AFTER 태그 */
-.ba-label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: 1000px;
-  margin: 0 auto 20px;
+/* 2단 헤더 */
+.ba-columns {
+  display: none;
 }
 
-.ba-label-tag {
+.ba-col-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ba-col-tag {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  padding: 6px 16px;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
   border-radius: var(--radius-sm);
 }
 
-.ba-label-before {
-  background: #FEE2E2;
-  color: #991B1B;
-}
+.ba-tag-before { background: #FEE2E2; color: #991B1B; }
+.ba-tag-after { background: #DCFCE7; color: #166534; }
 
-.ba-label-after {
-  background: #DCFCE7;
-  color: #166534;
-}
-
-.ba-label-desc {
-  font-size: 14px;
-  font-weight: 500;
+.ba-col-desc {
+  font-size: 13px;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
-/* Card Grid: Before & After 동일 구조 */
-.ba-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.ba-col-center-header { width: 60px; flex-shrink: 0; }
+
+/* 타임라인 Row */
+.ba-row {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
-.ba-card {
+/* Cell (카드) */
+.ba-cell {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 20px 24px;
+  padding: 20px;
   transition: all var(--transition);
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
 }
 
-.ba-card:hover {
+.ba-cell:hover {
   box-shadow: var(--shadow-sm);
 }
 
-/* Before 카드: 빨간 왼쪽 보더 */
-.ba-card-before {
+.ba-cell-before {
   border-left: 3px solid #EF4444;
-  background: #fff;
 }
+.ba-cell-before h4 { color: #991B1B; }
 
-.ba-card-before h4 {
-  color: #991B1B;
-}
-
-/* After 카드: 파란 왼쪽 보더 */
-.ba-card-after {
+.ba-cell-after {
   border-left: 3px solid var(--primary);
-  background: #fff;
 }
+.ba-cell-after h4 { color: var(--primary-dark); }
 
-.ba-card-after h4 {
-  color: var(--primary-dark);
-}
-
-/* 시간 태그 */
-.ba-time {
-  flex-shrink: 0;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-muted);
-  background: var(--bg-gray);
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  min-width: 52px;
-  text-align: center;
-  margin-top: 2px;
-}
-
-.ba-card h4 {
+.ba-cell h4 {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.ba-card p {
+.ba-cell p {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.6;
 }
 
-/* Divider: Before → After */
-.ba-divider {
+/* 중앙 타임라인 (모바일: 숨김) */
+.ba-cell-center {
   display: flex;
   align-items: center;
-  gap: 16px;
-  max-width: 1000px;
-  margin: 32px auto;
+  gap: 8px;
+  padding: 4px 0;
 }
 
-.ba-divider-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.ba-divider-arrow {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--primary);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--primary-light);
+.ba-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
   border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ba-time-label {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
 /* 성과 요약 */
@@ -742,7 +705,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   max-width: 700px;
-  margin: 40px auto 0;
+  margin: 48px auto 0;
 }
 
 .ba-summary-item {
@@ -768,20 +731,80 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+/* 태블릿+ : 좌우 2단 타임라인 */
 @media (min-width: 768px) {
-  .ba-grid { grid-template-columns: repeat(2, 1fr); }
-  .ba-card { gap: 20px; }
+  .ba-columns {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 24px;
+  }
+  .ba-col-header { flex: 1; }
+  .ba-col-header-after { justify-content: flex-end; }
+
+  .ba-row {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 0 auto 16px;
+    gap: 0;
+  }
+
+  .ba-cell {
+    flex: 1;
+  }
+
+  .ba-cell-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 60px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 0 8px;
+  }
+
+  /* 중앙 세로선 */
+  .ba-cell-center::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--border);
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .ba-dot {
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--bg-gray);
+    z-index: 1;
+    position: relative;
+  }
+
+  .ba-time-label {
+    font-size: 12px;
+    z-index: 1;
+    position: relative;
+    background: var(--bg-gray);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
   .ba-summary-value { font-size: 32px; }
 }
 
 @media (min-width: 1280px) {
-  .ba-grid { grid-template-columns: repeat(5, 1fr); }
-  .ba-card {
-    flex-direction: column;
-    gap: 8px;
-    padding: 20px;
+  .ba-columns,
+  .ba-row {
+    max-width: 1000px;
   }
-  .ba-time { align-self: flex-start; }
+  .ba-cell-center { width: 80px; }
+  .ba-col-center-header { width: 80px; }
 }
 
 /* ========================================
